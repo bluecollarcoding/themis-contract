@@ -60,10 +60,6 @@ type Contract struct {
 // New creates a new contract in the configured path from the specified upstream
 // contract.
 func New(contractPath, upstreamLoc string, ctx *Context) (*Contract, error) {
-	if len(upstreamLoc) == 0 {
-		return nil, fmt.Errorf("when creating a contract with the `new` command, an upstream contract must be supplied as a template")
-	}
-
 	// load (and optionally cache) the upstream contract
 	upstream, err := Load(upstreamLoc, ctx)
 	if err != nil {
