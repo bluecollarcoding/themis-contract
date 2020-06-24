@@ -11,7 +11,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-const defaultContractPath = "contract.dhall"
+const defaultContractPath = "contract"
 
 var (
 	flagVerbose      bool
